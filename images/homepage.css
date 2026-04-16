@@ -1,0 +1,606 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #AE1332;
+  color: white;
+}
+
+main {
+  flex: 1;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  background: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 30px;
+}
+
+.basket {
+  height: 25px;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.top {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1.2fr;
+  gap: 30px;
+  padding: 50px 30px;
+  position: relative;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.top-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  position: relative;
+  padding: 20px;
+}
+
+.top-left p {
+  max-width: 250px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.watermelon {
+  width: 249px;
+  height: 387px;
+  opacity: 1;
+  top: 610px;
+  left: 62px;
+  border-radius: 500px;
+  margin-top: 20px;
+}
+
+.top-center {
+  text-align: center;
+  position: relative;
+}
+
+.top-center h1 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.top-image img {
+  width: 452px;
+  height: 702px;
+  opacity: 1;
+  top: 172px;
+  left: 414px;
+  border-radius: 500px;
+  object-fit: cover;
+}
+
+.fruit {
+  position: absolute;
+  width: 70px;
+}
+
+.strawberry {
+  top: 0px;
+  right: 25%;
+}
+
+.banana {
+  top: 58px;
+  left: 32%;
+}
+.shop-now-btn {
+  position: absolute;
+  bottom: -55px;   /* attaches to bottom of woman image */
+  left: 50%;
+  transform: translateX(-50%) rotate(-14deg);
+
+  width: 114px;
+  height: 114px;
+  background: url('images/shopnowbg.png') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #AE1332;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+.shop-now-btn:hover {
+    opacity: 0.9;
+}
+
+.top-image {
+  position: relative;
+  display: inline-block;
+}
+
+/* wrapper to position circle */
+.shop-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: -40px; /* pulls circle upward */
+}
+
+/* circle button */
+.shop-now-btn {
+  width: 110px;
+  height: 110px;
+  background: white;
+  color: #AE1332;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  transform: scale(1.05);
+}
+
+
+.top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-right img {
+  width: 249px;
+  height: 387px;
+  opacity: 1;
+  top: 386px;
+  left: 969px;
+  border-radius: 500px;
+}
+
+.four-hashtag {
+  width: 125px;
+  height: 38px;
+  opacity: 1;
+  top: 817px;
+  left: 952px;
+  gap: 10px;
+  border-radius: 1000px;
+  padding-top: 12px;
+  padding-right: 32px;
+  padding-bottom: 12px;
+  padding-left: 32px;
+  border-width: 1px;
+
+  margin-top: 20px;
+}
+
+/* =========================
+   STEPS SECTION
+========================= */
+.steps-section {
+  display: flex;
+  flex-direction: column; /* stack images vertically */
+  align-items: center;    /* center horizontally */
+  padding: 100px 20px;
+  position: relative;     /* allow absolute positioning of children if needed */
+  gap: 40px;              /* space between steps and berry */
+}
+
+.steps-section .steps {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.steps-section .berry {
+  width: 100%;
+  max-width: 860px;
+  height: auto;
+  border-radius: 20px;
+  left: auto; /* remove the previous left: 210px */
+  margin: 0;  /* reset any unintended margin */
+}
+
+.steps {
+  width: 100%;
+  max-width: 800px;
+}
+
+.berry {
+  margin-top: 40px;
+  border-radius: 20px;
+  width: 860px;
+  height: 476px;
+  opacity: 1;
+  left: 210px;
+  border-radius: 20px;
+}
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+.mid {
+  text-align: center;
+  padding: 20px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid p {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.product-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, .5fr));
+  row-gap: 1em;
+  column-gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+.product-card {
+  color: #fefefe;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+}
+#strawberry{
+  background: #F8766B;
+  width: 389px;
+  height: 465px;
+  opacity: 1;
+  border-radius: 20px;
+}
+#banana{
+  background: #EDD251;
+  width: 389px;
+  height: 465px;
+  opacity: 1;
+  border-radius: 20px;
+}
+#watermelon-head{
+  background: #9DC262;
+  width: 389px;
+  height: 465px;
+  opacity: 1;
+  border-radius: 20px;
+}
+#lime{
+  background: #BFD663;
+  width: 389px;
+  height: 465px;
+  opacity: 1;
+  border-radius: 20px;
+}
+#apple{
+  background: #E93F29;
+  width: 389px;
+  height: 465px;
+  opacity: 1;
+  border-radius: 20px;
+}
+#peach{
+  background: #DB4F4B;
+  width: 389px;
+  height: 465px;
+  opacity: 1;
+  border-radius: 20px;
+}
+#plum{
+  background: #9B5366;
+  width: 389px;
+  height: 465px;
+  opacity: 1;
+  border-radius: 20px;
+}
+#orange{
+  background: #F47F4C;
+  width: 389px;
+  height: 465px;
+  opacity: 1;
+  border-radius: 20px;
+}
+#kiwi{
+  background: #98B37E;
+  width: 389px;
+  height: 465px;
+  opacity: 1;
+  border-radius: 20px;
+}
+.product-card {
+  display: flex;            /* makes the card a flex container */
+  flex-direction: column;   /* stack elements vertically */
+  justify-content: flex-start; /* optional, default */
+  height: 465px;            /* match the height of your colored card backgrounds */
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+}
+.product-card h2 {
+  margin-bottom: 5px;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 200px;
+  margin: 15px 0;
+  flex-shrink: 0;
+}
+
+.product-card button {
+  margin-top: auto; 
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #ffffff;
+  color: #AE1332;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   BOTTOM SECTION
+========================= */
+.bottom {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.bottom-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.bottom-images img{
+  width: 400px;
+  height: 502px;
+  opacity: 1;
+  border-radius: 20px;
+  height: 502px;
+  width: 400px;
+  border-radius: 20px;
+}
+#melon-below {
+    width: 700px;
+    height: 502px;
+    opacity: 1;
+    border-radius: 20px;
+}
+
+
+.bottom-form {
+  margin: 40px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.bottom-form p{
+  width: 492px;
+  height: 54px;
+  opacity: 1;
+  gap: 14px;
+}
+
+.bottom-form input[type="email"] {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 14px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.bottom-form input[type="email"]::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.bottom-form input[type="email"]:focus {
+  outline: none;
+  background: rgba(255,255,255,0.2);
+}
+
+.bottom-form button {
+  padding: 12px 30px;
+  border-radius: 20px;
+  border: none;
+  background: #BFD663;
+  color: #AE1332;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bottom-form button:hover {
+  background: #EDD251;
+}
+
+/* =========================
+   FOOTER
+========================= */
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  display: flex;
+  justify-content: space-between; /* space between left, center, right */
+  align-items: flex-start;
+  background: white;
+  color: #000;
+  padding: 40px 60px;
+  flex-wrap: wrap; /* responsive support */
+}
+
+/* LEFT SECTION */
+.leftfooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px; /* adjust depending on image height */
+}
+
+.leftfooter .woman-img {
+  width: 150px;
+  margin-bottom: auto; /* top image stays at top */
+}
+
+.leftfooter .footer-logo {
+  width: 100px;
+  margin-top: auto; /* logo pinned to bottom */
+}
+
+/* CENTER SECTION */
+.navfoot ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.navfoot li {
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* RIGHT SECTION */
+.rightfooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.rightfooter .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.rightfooter .social-icons img {
+  width: 50px;
+}
+
+.rightfooter .contact-text {
+  text-align: right;
+  line-height: 1.5;
+}
+.leftfooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto; /* let it adjust based on content */
+}
+
+.leftfooter .woman-img {
+  width: 200px; /* smaller than before */
+  max-height: 200px; /* prevents it from being too tall */
+  object-fit: cover;
+}
+
+.leftfooter .footer-logo {
+  width: 150px; /* adjust logo size too */
+  margin-top: auto; /* keep it at bottom */
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .top-left {
+    align-items: center;
+  }
+
+  .top-right {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-center h1 {
+    font-size: 22px;
+  }
+
+  .fruit {
+    display: none;
+  }
+
+  .bottom-images img {
+    width: 100%;
+  }
+}
